@@ -6,4 +6,8 @@ public class Kitten extends Cat {
         super(name, age, "Female");
     }
 
+    @Override
+    public String produceSound() {
+        return "Miau";
+    }
 }

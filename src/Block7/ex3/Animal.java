@@ -6,6 +6,11 @@ public abstract class Animal implements SoundProducible {
     private String gender;
 
     public Animal(String name, int age, String gender) {
+        if (name == null || name.isBlank() ||
+                age < 0 ||
+                gender == null || gender.isBlank()) {
+            throw new IllegalArgumentException("Invalid input!");
+        }
         this.name = name;
         this.age = age;
         this.gender = gender;
