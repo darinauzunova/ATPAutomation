@@ -1,4 +1,4 @@
-package HomeWorkBlock5;
+package HomeWorkBlock6;
 
 import java.util.Random;
 
