@@ -1,16 +1,16 @@
-package HomeWorkBlock6;
+package block8.Homework8.model;
 
 public class TestCase {
     private int id;
     private String title;
-    private String status;
+    private TestStatus status;
 
     private static int count = 0;
 
     public TestCase(int id, String title) {
         this.id = id;
         this.title = title;
-        this.status = "NOT_RUN";
+        this.status = TestStatus.NOT_RUN;
         count++;
     }
 
@@ -22,7 +22,7 @@ public class TestCase {
         return title;
     }
 
-    public String getStatus() {
+    public TestStatus getStatus() {
         return status;
     }
 
@@ -30,14 +30,8 @@ public class TestCase {
         return count;
     }
 
-    public void setStatus(String status) {
-        if (status.equals("PASSED") ||
-                status.equals("FAILED") ||
-                status.equals("SKIPPED")) {
-            this.status = status;
-        } else {
-            System.out.println("Invalid status!");
-        }
+    public void setStatus(TestStatus status) {
+        this.status = status;
     }
 
     public String describe() {
